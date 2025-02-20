@@ -7,7 +7,7 @@ public class Task008 {
             do{
                 hundreds = i / 100;
                 tens = i / 10  % 10;
-                units = i % 100;
+                units = i % 10;
                 if (hundreds != tens && hundreds != units && tens != units) {
                     System.out.println(i);
                 }
