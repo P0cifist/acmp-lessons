@@ -9,14 +9,16 @@ public class Task017 {
         System.out.println("Enter no. of elements in array: ");
         int n = sc.nextInt();
         int[] numbers = new int[n];
-        Arrays.sort(numbers);
+
 
         int pairCount = 0;
         int currentCount = 1;
 
         for (int i = 0; i < n; i++) {
-            numbers[i] = rand.nextInt(10);
+            numbers[i] = rand.nextInt(3);
         }
+
+        Arrays.sort(numbers);
 
         for (int i = 0; i < n; i++) {
             System.out.print(numbers[i] + " ");
@@ -27,14 +29,14 @@ public class Task017 {
                 currentCount++;
             } else {
                 if (currentCount >= 2) {
-                    pairCount += currentCount * (currentCount - 1) / 2;
+                    pairCount = pairCount +(currentCount * (currentCount - 1) / 2);
                 }
                 currentCount = 1;
             }
         }
 
         if (currentCount >= 2) {
-            pairCount += currentCount * (currentCount - 1) / 2;
+            pairCount = pairCount + (currentCount * (currentCount - 1) / 2);
         }
 
         System.out.println(pairCount);
